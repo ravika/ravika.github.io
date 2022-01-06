@@ -1,0 +1,163 @@
+<html>
+<!-- A script to generate html for a publication. In Chrome, right click and click Inspect. Copy paste console contents after filling details and pressing Submit --> 
+<script>
+
+// https://stackoverflow.com/a/1349426
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
+
+function genhtml()
+{
+   // Create paper id
+   var paper_id = makeid(7);
+
+   // http://www.howtocreate.co.uk/tutorials/jsexamples/syntax/prepareInline.html
+   var txt = '<ul class=\"list-group\">\n  <li class=\"list-group-item\" style=\"padding:0 0 0.2% 1.1%;border:1px solid\">\n  <div class=\"media\">\n <div class=\"pull-left text-center\" style=\"padding:9px 1.5% 0 0; width:45%;\" href=\"\">';
+   txt += '\n';
+
+   var txt_2 = '<img width=\"100%\" src=\".\/ravikiran_files\/TEASERPIC\"><\/div>'.replace("TEASERPIC",document.myform.teaserpic.value);
+   txt += txt_2;
+   txt += '\n';
+
+   var txt_3 = '<div class=\"pull-left text-left\" style=\"padding:0% 0% 0% 0.1%; width:45%;\">\n   <p style=\"margin:-3px 0px 0px 0px;\"><\/p>\n   <h4 style=\"font-size:14.1px; line-height:120%\">';
+   txt += txt_3;
+   txt += '\n';
+   
+   var txt_4 = document.myform.papertitle.value;
+   txt += txt_4;
+   txt += '\n';
+
+   if( document.myform.isoral.value == "Yes" )
+   {
+	var txt_5 = '<b><font color=red>[ORAL]<\/font><\/b>';
+   	txt += txt_5;
+   }
+   txt += '\n';
+
+   var txt_6 = '<\/h4>\n<p style=\"margin:-9.0px 0px 0px 0px;\"><\/p>\n<p style=\"font-size:13.4px\">';
+   txt += txt_6;
+   txt += '\n';
+
+   var txt_7 = document.myform.authlist.value;
+   txt += txt_7;
+   txt += '\n';
+
+   var txt_8 = '<\/p>\n<p style=\"margin:-10.0px 0px 0px 0px;\"><\/p>\n<p style=\"font-size:13.4px\">In <em><strong>';
+   txt += txt_8;
+   txt += '\n';
+
+   var txt_9 = document.myform.pubvenue.value;
+   txt += txt_9;
+   txt += '\n';
+
+   var txt_10 = '<\/strong><\/em>,';
+   txt += txt_10;
+   txt += '\n';
+
+   var txt_11 = document.myform.pubyear.value;
+   txt += txt_11;
+   txt += '\n';
+
+   var txt_12 = '<\/p>\n<br>\n<p style=\"margin:-10.0px 0px 0px 0px;\"><\/p>\n<p style=\"font-size:13.4px; color:#E62E00;\">'; 
+   txt += txt_12;
+   txt += '\n';
+
+   var txt_13 = document.myform.pubblurb.value
+   txt += txt_13;
+   txt += '\n';
+ 
+   var txt_14 = '<\/p>\n<p style=\"margin:-9.0px 0px 0px 0px;\"><\/p>';
+   txt += txt_14;
+   txt += '\n';
+
+   var txt_15 = '<a href=\"PAPERURL\" target=\"_blank\" class=\"buttonTT\">Paper<\/a>&nbsp;'.replace("PAPERURL",document.myform.paperurl.value); 
+   txt += txt_15;
+   txt += '\n';
+
+   var txt_16 = '<a class=\"buttonAA\" data-toggle=\"collapse\" data-parent=\"#PAPERIDabs\" href=\"#PAPERIDabs-list\">Abstract<\/a>&nbsp;'.replace("PAPERID",paper_id).replace("PAPERID",paper_id);
+   txt += txt_16;
+   txt += '\n';
+
+
+   var txt_17 = '<a href=\"PROJECTURL\" target=\"_blank\" class=\"buttonPP\">Project page<\/a>&nbsp;'.replace("PROJECTURL",document.myform.projurl.value);
+   txt += txt_17;
+   txt += '\n';
+
+   var txt_18 = '<div id=\"PAPERID-list\" class=\"panel-collapse collapse out\" style=\"background-color:#FFE0C2; padding:0% 3% 1% 3%; border-radius:10px;\">'.replace("PAPERID",paper_id);
+   txt += txt_18;
+   txt += '\n';
+
+   var txt_19 = '<p style=\"font-size:15px;\">\n<\/p>\n<\/div>\n<div id=\"PAPERIDabs-list\" class=\"panel-collapse collapse out\" style=\"background-color:#ADEBFF; padding:9px 2.5% 3px 2.5%; border-radius:10px;\">\n<p style=\"margin:0px 0px 0px 0px;\"><\/p>\n<p style=\"font-size:14.1px;\">'.replace("PAPERID",paper_id);
+   txt += txt_19;
+   txt += '\n';
+
+   var txt_20 = document.myform.paperabs.value;
+   txt += txt_20;
+   txt += '\n';
+
+   var txt_21 = '<\/p>\n<p style=\"margin:0px 0px 0px 0px;\"><\/p>\n<\/div>\n<\/div>\n<div class=\"pull-right text-center\" style=\"padding:4px 0.5% 0 0; width:5.0%;\" href=\"\">\n<img width=\"100%\" src=\".\/ravikiran_files\/new_burst.png\">\n<\/div>'; 
+   txt += txt_21;
+   txt += '\n';
+
+   if( document.myform.isoral.value == "Yes" )
+   {
+	var txt_22 = '<div class=\"pull-right text-center\" style=\"padding:4px 0.5% 0 0; width:5.0%;\" href=\"\"><img width=\"100%\" src=\".\/ravikiran_files\/Oral-session-icon.png\"><\/div>';
+	txt += txt_22;
+   }
+   txt += '\n';
+
+   var url_tag_arr = document.myform.youtubeurl.value.split('=');
+   var txt_23 = '<iframe width=\"400\" height=\"300\" src=\"https:\/\/www.youtube.com\/embed\/URLTAG\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>'.replace("URLTAG",url_tag_arr[1]);
+   txt += txt_23;
+   txt += '\n';
+
+   var txt_24 = '<\/li>\n<\/ul>\n<p style=\"margin:-13.5px 0px 0px 0px;\"><\/p>\n<br>';
+   txt += txt_24;
+   txt += '\n';
+
+   console.log(txt);
+}
+
+</script>
+
+<form name='myform'>
+<p>Enter paper title: 
+<input type = 'text' name='papertitle' value = ''>
+<p>Enter author list: 
+<input type = 'text' name='authlist' value = ''>
+<p>Enter paper url: 
+<input type = 'text' name='paperurl' value = ''>
+<p>Enter paper abstract: 
+<input type = 'text' name='paperabs' value = ''>
+<p>Enter publication venue: 
+<input type = 'text' name='pubvenue' value = ''>
+<p>Enter publication year: 
+<input type = 'text' name='pubyear' value = ''>
+<p>Enter publication blurb: 
+<input type = 'text' name='pubblurb' value = ''>
+<p>Enter project page url: 
+<input type = 'text' name='projurl' value = ''>
+<p>Enter youtube url: 
+<input type = 'text' name='youtubeurl' value = ''>
+<p>Enter name of teaser pic file:
+<input type = 'text' name='teaserpic' value = ''>
+
+<p>Is it an oral presentation?
+<select name="isoral">
+ <option value=No>No</option>
+ <option value=Yes>Yes</option>
+</select>
+</p>
+<p><input type = 'submit' onclick='genhtml(); return false'></p>
+<!-- note that return false after the function call is vital to stop page refresh -->
+</p>
+</form>
+</html>
