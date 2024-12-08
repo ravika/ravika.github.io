@@ -79,6 +79,58 @@ h4 {
   <li class="list-group-item" style="padding:0 0 0.2% 1.1%;border:1px solid">
   <div class="media">
  <div class="pull-left text-center" style="padding:9px 1.5% 0 0; width:45%;" href="">
+<img width="100%" src="./ravikiran_files/linetr-method"></div>
+<div class="pull-left text-left" style="padding:0% 0% 0% 0.1%; width:45%;">
+   <p style="margin:-3px 0px 0px 0px;"></p>
+   <h4 style="font-size:14.1px; line-height:120%">
+LineTR: Unified Text Line Segmentation for Challenging Palm Leaf Manuscripts
+
+</h4>
+<p style="margin:-9.0px 0px 0px 0px;"></p>
+<p style="font-size:13.4px">
+Vaibhav Agrawal, Niharika Vadlamudi, Amal Joseph, Muhammad Waseem, Sreenya Chitluri, Ravi Kiran Sarvadevabhatla
+</p>
+<p style="margin:-10.0px 0px 0px 0px;"></p>
+<p style="font-size:13.4px">In <em><strong>
+International Conference on Pattern Recognition (ICPR)
+</strong></em>,
+2024
+</p>
+<br>
+<p style="margin:-10.0px 0px 0px 0px;"></p>
+<p style="font-size:13.4px; color:#E62E00;">
+Re-imagining text line localization in challenging documents. Instead of a pixel-based segmentation paradigm, LineTR uses a parametric representation of a line, leveraging its inductive priors. 
+</p>
+<p style="margin:-9.0px 0px 0px 0px;"></p>
+<a href="https://drive.google.com/file/d/1Z2nMoeyhxy_HgHTrmcT_UD2LBV-Y0FhJ/view?usp=drive_link" target="_blank" class="buttonTT">Paper</a>&nbsp;
+<a class="buttonAA" data-toggle="collapse" data-parent="#Qoid9agabs" href="#Qoid9agabs-list">Abstract</a>&nbsp;
+<a href="https://ihdia.iiit.ac.in/LineTR/" target="_blank" class="buttonPP">Project page</a>&nbsp;
+<div id="Qoid9ag-list" class="panel-collapse collapse out" style="background-color:#FFE0C2; padding:0% 3% 1% 3%; border-radius:10px;">
+<p style="font-size:15px;">
+</p>
+</div>
+<div id="Qoid9agabs-list" class="panel-collapse collapse out" style="background-color:#ADEBFF; padding:9px 2.5% 3px 2.5%; border-radius:10px;">
+<p style="margin:0px 0px 0px 0px;"></p>
+<p style="font-size:14.1px;">
+Historical manuscripts pose significant challenges for line segmentation due to their diverse sizes, scripts, and appearances. Traditional methods often rely on dataset-specific processing or training per-dataset models, limiting scalability and maintainability. To this end, we propose LineTR, a single model for all dataset collections. LineTR is a two-staged approach. The first stage predicts text-strike-through lines called scribbles and a novel text-energy map of the input document image. The second stage is a seam-generation network which uses these to get precise polygons around the text-lines. Text-line segmentation has been mainly approached as a dense-prediction task, which is ineffective, as the inductive prior of a line is not utilized, and this leads to poor segmentation performance. Thus, our key insight is to parametrize a text-line, thus preserving these inductive priors. To avoid resizing the document, the input image is first broken down into context-adapted patches, and each patch is processed by the stage-1 network independently. The patch-level outputs are combined using a dataset-agnostic post processing pipeline. Notably, we show that carefully choosing the patch size to capture enough context is crucial for generalization, as document images come in arbitrary resolutions. LineTR has been evaluated extensively through experiments and qualitative comparisons. Additionally, our method exhibits strong zero-shot generalization to unseen document collections.
+</p>
+<p style="margin:0px 0px 0px 0px;"></p>
+</div>
+</div>
+<div class="pull-right text-center" style="padding:4px 0.5% 0 0; width:5.0%;" href="">
+<img width="100%" src="./ravikiran_files/new_burst.png">
+</div>
+
+<iframe width="400" height="300" src="https://ihdia.iiit.ac.in/LineTR/static/videos/1711_final_2mins.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</li>
+</ul>
+<p style="margin:-13.5px 0px 0px 0px;"></p>
+<br>
+
+<ul class="list-group">
+  <li class="list-group-item" style="padding:0 0 0.2% 1.1%;border:1px solid">
+  <div class="media">
+ <div class="pull-left text-center" style="padding:9px 1.5% 0 0; width:45%;" href="">
 <img width="100%" src="./ravikiran_files/olaf.jpg"></div>
 <div class="pull-left text-left" style="padding:0% 0% 0% 0.1%; width:45%;">
    <p style="margin:-3px 0px 0px 0px;"></p>
